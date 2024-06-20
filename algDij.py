@@ -20,9 +20,9 @@ def dijkstra (grafo, inicio):
 
         #actualizar las distancias de los vecinos al nodo actual
         for vecino, peso in enumerate(grafo[nodoActual]):
-            if peso>0:
+            if peso>0:#s
                 nuevaDistancia=distancias[nodoActual]+peso
-                if nuevaDistancia < distancias[vecino]:
+                if nuevaDistancia < distancias[vecino]:#esto se hace para que dado el caso que el vecino de un peso mayor no se sustituya como nueva distancia
                     distancias[vecino] = nuevaDistancia
     return distancias
 
